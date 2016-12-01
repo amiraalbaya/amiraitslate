@@ -61,7 +61,7 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
@@ -72,13 +72,4 @@ class UsersController < ApplicationController
       params.require(:user).permit(:username, :email, :password, :password_confirmation, :admin)
     end
 
-    def make_admin
-      @user.toggle!(:admin)
-      if @user.save
-        redirect_to users_path, notice: 'User was
-    successfully updated.'
-      else
-        flash[:alert]= 'Error updating user'
-        redirect_to users_path
-    end
 end

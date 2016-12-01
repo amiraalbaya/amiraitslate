@@ -1,4 +1,6 @@
 class SessionController < ApplicationController
+	 before_action :session_params, only: [:create]
+
 	def new
 	end
 
@@ -18,4 +20,10 @@ class SessionController < ApplicationController
 		logout
 		redirect_to root_url
 	end
+
+	private 
+
+	def session_params
+    	params.require(:session).permit(:email, :password)
+  	end
 end

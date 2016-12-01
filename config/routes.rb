@@ -3,16 +3,20 @@ Rails.application.routes.draw do
   resources :roles
   resources :platforms
   resources :ideas
+  resources :session
   resources :users do
       get :make_admin, on: :member
   end
-  resources :sessions
+  
 
 
   root 'ideas#index' 
-  get '/session/new' => 'sessions#new', as: :login
-  delete 'session/:id' => 'sessions#destoy', as: :logout
+  get 'session/new' => 'session#new', as: :login
+  post 'session/new' => 'session#create'
+  delete 'session/destroy' => 'session#destoy'
+  get 'session/destroy' => 'session#destoy', as: :logout
   get 'users/new' => 'users#new', as: :signup
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
