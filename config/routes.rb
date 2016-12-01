@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   resources :roles
   resources :platforms
   resources :ideas
-  resources :users
+  resources :users do
+      get :make_admin, on: :member
+  end
+  resources :sessions
 
 
   root 'ideas#index' 

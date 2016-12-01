@@ -69,6 +69,16 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :email, :password, :admin)
+      params.require(:user).permit(:username, :email, :password, :password_confirmation, :admin)
+    end
+
+    def make_admin
+      @user.toggle!(:admin)
+      if @user.save
+        redirect_to users_path, notice: 'User was
+    successfully updated.'
+      else
+        flash[:alert]= 'Error updating user'
+        redirect_to users_path
     end
 end
