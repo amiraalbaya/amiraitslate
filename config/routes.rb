@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   delete 'session/destroy' => 'session#destoy'
   get 'session/destroy' => 'session#destoy', as: :logout
   get 'users/new' => 'users#new', as: :signup
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
