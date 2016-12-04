@@ -7,7 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 	r = Role.create(name: "Employer")
     Role.create(name: "Job Seeker")
-    Role.create([{name: "Executive"}, {name: "Networking"},
+    Role.create([{name: "Regional Manager"}, {name: "Marketing"},
     {name: "Programming"}, {name: "Design"}])
     User.create(email: "tartan@cmu.edu", password:
     "foobar", admin: true, role_id: r.id)
+
+    a = Platform.create(name: "IOS")
+    Platform.create(name: "Android")
+    Idea.create([{title: "Executive Manager"}, {description: "Networking"},
+    {skills: "Programming C++"}, {additional: "Designer"}])
+    Job.create(title: "Boss", platform:
+    "IOS", user_id: "sara")
