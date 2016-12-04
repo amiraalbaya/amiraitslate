@@ -72,4 +72,18 @@ class IdeasController < ApplicationController
       params.require(:idea).permit(:title, :description, :skills, :additional)
     end
 
+  def asc
+    @Ideas = Ideas.all.asc
+  end
+  def desc
+    @ideas = Ideas.all.desc
+  end
+  def newplease
+    @ideas = Ideas.all.newplease
+  end
+  def oldplease
+    @ideas = Ideas.all.oldplease
+  end
+
+
 end

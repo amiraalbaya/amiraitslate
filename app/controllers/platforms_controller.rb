@@ -72,4 +72,7 @@ class PlatformsController < ApplicationController
       params.require(:platform).permit(:name)
     end
 
+ 
+
+
 end

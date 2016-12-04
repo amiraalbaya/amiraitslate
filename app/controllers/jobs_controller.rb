@@ -72,4 +72,8 @@ class JobsController < ApplicationController
       params.require(:job).permit(:title, :platform, :user_id)
     end
 
+
+
+
+
 end

@@ -19,6 +19,11 @@ root to: 'visitor#index'
   get 'session/destroy' => 'session#destoy', as: :logout
   get 'users/new' => 'users#new', as: :signup
 
+  get 'asc' => 'ideas#asc'
+  get 'desc' => 'ideas#desc'
+  get 'oldplease' => 'ideas#oldplease'
+  get 'newplease' => 'ideas#newplease'
+
  
   
 
