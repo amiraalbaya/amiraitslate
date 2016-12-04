@@ -9,14 +9,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/Ideas"><%= link_to 'Home', root_path %></a></li></a>
+
     </div>
  
       <ul class="nav navbar-nav navbar-right">
-        <li role="presentation"><a href ="/platforms">Platform</a></li>
-        <li role="presentation"><a href="/users">Users</a></li>
-        <li role="presentation"><a href="/roles">Roles</a></li>
+        
             <% if logged_in? %>
+              <li role="presentation"><a class="navbar-brand" href="/ideas"><%= link_to 'Home', ideas_path %></a></li>
+              <li role="presentation"><a href ="/platforms">Platform</a></li>
+              <li role="presentation"><a href="/users">Users</a></li>
+              <li role="presentation"><a href="/roles">Roles</a></li>
 
               <li><%= link_to 'Logout', logout_path, method: :delete%></li>
 
