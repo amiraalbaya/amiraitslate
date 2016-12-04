@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'visitor#index' 
+  resources :visitor, path: ''
   resources :jobs
   resources :roles
   resources :platforms
