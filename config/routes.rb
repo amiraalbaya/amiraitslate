@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   
 
 
-  root 'ideas#index' 
+  root to: 'visitors#index' 
   get 'session/new' => 'session#new', as: :login
   post 'session/new' => 'session#create'
   delete 'session/destroy' => 'session#destoy'
