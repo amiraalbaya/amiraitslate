@@ -71,4 +71,5 @@ class PlatformsController < ApplicationController
     def platform_params
       params.require(:platform).permit(:name)
     end
+
 end

@@ -5,5 +5,5 @@ class Idea < ActiveRecord::Base
 
 	validates :title, :skills, presence: true
 
-	##NEXT TO USERS INSERT. WHEN SCAFFOLD TABLE. has_many users :through jobs
+
 end
