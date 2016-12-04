@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'visitor#index' 
-  resources :visitor, path: ''
+  
   resources :jobs
   resources :roles
   resources :platforms
@@ -10,7 +9,8 @@ Rails.application.routes.draw do
       get :make_admin, on: :member
   end
   
-
+root to: 'visitor#index' 
+  resources :visitor, path: ''
 
   
   get 'session/new' => 'session#new', as: :login
