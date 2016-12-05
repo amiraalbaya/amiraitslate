@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :ideas
   resources :session
   resources :users do
-      get :make_admin, on: :member
+      get :be_admin, on: :member
   end
   
 root to: 'visitor#index' 

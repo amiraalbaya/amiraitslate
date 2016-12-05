@@ -1,6 +1,8 @@
 class VisitorController < ApplicationController
 	skip_before_action :authenticate
 
+
+
   def asc
     @Ideas = Ideas.all.asc
   end
